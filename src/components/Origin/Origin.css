@@ -1,0 +1,358 @@
+.origin{
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  background:#050505;
+  padding:60px 8% 100px;
+}
+
+.origin::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:url("../../assets/images/spider-logo.webp");
+
+  background-repeat:no-repeat;
+
+  background-position:center;
+
+  background-size:1200px;
+
+  opacity:.04;
+
+  pointer-events:none;
+
+}
+/* Background Glow */
+
+.origin-red-glow{
+  position:absolute;
+  left:-150px;
+  top:20%;
+
+  width:450px;
+  height:450px;
+
+  background:#E62429;
+  border-radius:50%;
+
+  filter:blur(180px);
+  opacity:.12;
+}
+
+.origin-blue-glow{
+  position:absolute;
+  right:-150px;
+  bottom:20%;
+
+  width:450px;
+  height:450px;
+
+  background:#0A3D91;
+  border-radius:50%;
+
+  filter:blur(180px);
+  opacity:.12;
+}
+
+/* Hanging Spider */
+
+.hanging-spider{
+  position:absolute;
+  top:0;
+  right:50px;
+
+  height:300px;
+
+  z-index:20;
+
+  animation:swing 5s ease-in-out infinite;
+}
+
+/* Background Webs */
+
+.web{
+  position:absolute;
+  opacity:.08;
+  pointer-events:none;
+}
+
+.web1{
+  width:220px;
+  top:100px;
+  left:-20px;
+}
+
+.web2{
+  width:180px;
+  top:700px;
+  right:20px;
+}
+
+.web3{
+  width:220px;
+  bottom:600px;
+  left:20px;
+}
+
+.web4{
+  width:180px;
+  bottom:100px;
+  right:30px;
+}
+
+/* Header */
+
+.origin-header{
+  text-align:center;
+  margin-bottom:70px;
+  position:relative;
+  z-index:10;
+}
+
+.origin-title{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:4.5rem;
+  color:white;
+  letter-spacing:8px;
+}
+
+.origin-subtitle{
+  font-family:"Poppins",sans-serif;
+  color:#d0d0d0;
+  font-size:1.1rem;
+}
+
+/* Story Layout */
+
+.story-section{
+  display:grid;
+  grid-template-columns:320px 1fr;
+
+  align-items:center;
+
+  gap:50px;
+
+  max-width:1200px;
+
+  margin:70px auto;
+
+  position:relative;
+  z-index:10;
+}
+
+.reverse{
+  grid-template-columns:1fr 320px;
+}
+
+/* Images */
+
+.story-image{
+
+  flex:1;
+
+  display:flex;
+
+  justify-content:center;
+
+  position:relative;
+
+}
+.story-image::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  background:#E62429;
+
+  border-radius:50%;
+
+  filter:blur(90px);
+
+  opacity:.18;
+
+  animation:spiderPulse 3s infinite;
+
+}
+
+.story-image img{
+  width:260px;
+  max-width:100%;
+
+  object-fit:contain;
+
+  opacity:1 !important;
+
+  filter:none;
+
+  animation:floatImage 5s ease-in-out infinite;
+}
+.story-image img:hover{
+
+  transform:scale(1.08);
+
+  transition:0.4s ease;
+
+  filter:
+  drop-shadow(0 0 25px rgba(244, 32, 39, 0.756));
+
+}
+
+/* Text */
+
+.story-text{
+  opacity:1 !important;
+}
+
+.story-text h3{
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:3rem;
+
+  color:#E62429;
+
+  margin-bottom:15px;
+
+  letter-spacing:3px;
+}
+
+.story-text p{
+  font-family:"Poppins",sans-serif;
+
+  color:#ffffff;
+
+  font-size:1.1rem;
+
+  line-height:2;
+
+  opacity:1 !important;
+  animation:fadeText 4s ease forwards;
+}
+.story-text p{
+  min-height:220px;
+}
+
+/* Quote */
+
+.quote-section{
+  text-align:center;
+  margin-top:80px;
+}
+
+.quote-image{
+  width:140px;
+  margin-bottom:15px;
+}
+
+.quote-section h2{
+  font-family:"Bebas Neue",sans-serif;
+
+  font-size:2rem;
+
+  color:white;
+
+  letter-spacing:3px;
+}
+
+/* Animations */
+
+@keyframes floatImage{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes swing{
+
+  0%{
+    transform:rotate(-4deg);
+  }
+
+  50%{
+    transform:rotate(4deg);
+  }
+
+  100%{
+    transform:rotate(-4deg);
+  }
+
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+  .story-section,
+  .reverse{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .story-image img{
+    width:220px;
+  }
+
+  .origin-title{
+    font-size:3rem;
+  }
+
+}
+@keyframes spiderPulse{
+
+  0%{
+    transform:scale(1);
+    opacity:.15;
+  }
+
+  50%{
+    transform:scale(1.2);
+    opacity:.3;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:.15;
+  }
+
+}
+@keyframes fadeText{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+#peter-text,
+#spiderbite-text,
+#uncleben-text{
+
+  border-right:2px solid #E62429;
+
+  animation:blink .8s infinite;
+
+}

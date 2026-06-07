@@ -1,0 +1,53 @@
+.video-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,.9);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:9999;
+
+}
+
+.video-container{
+
+  width:80%;
+
+  max-width:1000px;
+
+  position:relative;
+
+}
+
+.close-btn{
+
+  position:absolute;
+
+  right:-20px;
+
+  top:-20px;
+
+  width:40px;
+
+  height:40px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#E62429;
+
+  color:white;
+
+  cursor:pointer;
+
+  font-size:20px;
+
+}

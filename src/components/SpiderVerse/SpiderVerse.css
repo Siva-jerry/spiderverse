@@ -1,0 +1,348 @@
+.spiderverse{
+
+min-height:100vh;
+
+position:relative;
+
+overflow:hidden;
+
+background:#050505;
+
+padding:100px 8%;
+
+}
+
+.spiderverse::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+url("../../assets/images/logo.webp");
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+background-size:800px;
+
+opacity:.03;
+
+}
+
+/* Glows */
+
+.spiderverse-red-glow{
+
+position:absolute;
+
+left:-150px;
+top:20%;
+
+width:500px;
+height:500px;
+
+background:#E62429;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+opacity:.12;
+
+}
+
+.spiderverse-blue-glow{
+
+position:absolute;
+
+right:-150px;
+bottom:20%;
+
+width:500px;
+height:500px;
+
+background:#0A3D91;
+
+border-radius:50%;
+
+filter:blur(180px);
+
+opacity:.12;
+
+}
+
+/* Webs */
+
+.web{
+
+position:absolute;
+
+opacity:.07;
+
+pointer-events:none;
+
+}
+
+.web1{
+width:220px;
+top:80px;
+left:20px;
+}
+
+.web2{
+width:180px;
+top:500px;
+right:40px;
+}
+
+.web3{
+width:220px;
+bottom:500px;
+left:40px;
+}
+
+.web4{
+width:180px;
+bottom:100px;
+right:80px;
+}
+
+/* Header */
+
+.spiderverse-header{
+
+text-align:center;
+
+margin-bottom:80px;
+
+position:relative;
+
+z-index:10;
+
+}
+
+.spiderverse-header h2{
+
+font-family:"Bebas Neue",sans-serif;
+
+font-size:5rem;
+
+letter-spacing:8px;
+
+color:white;
+
+}
+
+.spiderverse-header p{
+
+font-family:"Montserrat",sans-serif;
+
+color:#ccc;
+
+}
+
+/* Grid */
+
+.spider-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+position:relative;
+
+z-index:10;
+
+}
+
+/* Card */
+
+.spider-card{
+
+position:relative;
+
+background:
+rgba(255,255,255,.04);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:25px;
+
+padding:30px;
+
+text-align:center;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.spider-card:hover{
+
+transform:
+translateY(-10px)
+scale(1.03);
+
+}
+
+/* Portal */
+
+.portal{
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+left:50%;
+top:80px;
+
+transform:
+translateX(-50%);
+
+border-radius:50%;
+
+filter:blur(35px);
+
+opacity:.5;
+
+}
+
+/* Images */
+
+.spider-card img{
+
+width:180px;
+
+height:180px;
+
+object-fit:contain;
+
+position:relative;
+
+z-index:2;
+
+animation:
+floatSpider 5s ease-in-out infinite;
+
+}
+
+/* Text */
+
+.spider-card h3{
+
+font-family:"Bebas Neue",sans-serif;
+
+font-size:2rem;
+
+letter-spacing:2px;
+
+color:white;
+
+margin-top:15px;
+
+}
+
+.spider-card p{
+
+font-family:"Poppins",sans-serif;
+
+color:#ccc;
+
+margin-top:8px;
+
+}
+
+/* Character Portal Colors */
+
+.miles .portal{
+background:#ff1744;
+}
+
+.gwen .portal{
+background:#ff69b4;
+}
+
+.sp2099 .portal{
+background:#00bfff;
+}
+
+.noir .portal{
+background:#ffffff;
+}
+
+.peni .portal{
+background:#ffcc00;
+}
+
+.ham .portal{
+background:#ff8c00;
+}
+
+.pavitr .portal{
+background:#ff9933;
+}
+
+.peterb .portal{
+background:#e62429;
+}
+
+.punk .portal{
+background:#cc00ff;
+}
+
+.superior .portal{
+background:#ff0000;
+}
+
+.scarlet .portal{
+background:#ff4444;
+}
+
+/* Animation */
+
+@keyframes floatSpider{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.spiderverse-header h2{
+
+font-size:3rem;
+
+}
+
+.spider-card img{
+
+width:140px;
+height:140px;
+
+}
+
+}

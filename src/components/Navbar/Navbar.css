@@ -1,0 +1,109 @@
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px 60px;
+
+  z-index:1000;
+
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-family:"Bebas Neue", sans-serif;
+  font-size:2rem;
+  letter-spacing:3px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  list-style:none;
+
+  font-family:"Montserrat", sans-serif;
+}
+
+.nav-links li{
+  position:relative;
+
+  cursor:pointer;
+
+  transition:all .3s ease;
+
+  padding:8px 0;
+}
+.nav-links li::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-4px;
+
+  width:0%;
+
+  height:2px;
+
+  background:#E62429;
+
+  transition:.4s ease;
+
+}
+
+.nav-links li:hover::after{
+
+  width:100%;
+
+}
+
+.nav-links li:hover{
+
+  color:#E62429;
+
+  transform:translateY(-3px);
+
+  transition:.3s;
+
+}
+.nav-links li:active{
+
+  transform:scale(.92);
+
+}
+
+.nav-links li:hover{
+  color:#E62429;
+}
+.music-toggle{
+
+  background:transparent;
+
+  border:none;
+
+  color:white;
+
+  font-size:1.4rem;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.music-toggle:hover{
+
+  transform:scale(1.2);
+
+  color:#E62429;
+
+  text-shadow:
+  0 0 15px #E62429;
+
+}
