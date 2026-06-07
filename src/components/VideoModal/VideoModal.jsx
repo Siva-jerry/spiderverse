@@ -1,4 +1,5 @@
 import "./VideoModal.css";
+import trailer from "../../assets/videos/spiderman-trailer.mp4";
 
 function VideoModal({ show, setShow }) {
 
@@ -28,10 +29,14 @@ function VideoModal({ show, setShow }) {
           autoPlay
           width="100%"
         >
+
           <source
-            src="/src/assets/videos/spiderman-trailer.mp4"
+            src={trailer}
             type="video/mp4"
           />
+
+          Your browser does not support video.
+
         </video>
 
       </div>
