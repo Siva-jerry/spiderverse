@@ -93,7 +93,7 @@ function Footer() {
           </h3>
 
           <p>
-            © 2025 SpiderVerse Project
+            © 2026 SpiderVerse Project
           </p>
 
         </div>
