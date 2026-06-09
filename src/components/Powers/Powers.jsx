@@ -100,7 +100,7 @@ function Powers() {
         </div>
 
         <div className="power-card">
-          <h3>🌐 Web Shooting</h3>
+          <h3>🕸️ Web Shooting</h3>
           <p>
             Using his own brilliant chemistry, Peter invented wrist-mounted mechanical devices that fire a high-tensile, rapid-hardening fluid to swing from buildings and web up criminals.
           </p>
